@@ -4,9 +4,8 @@
 <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.4">
-<meta name="author" content="Doc Writer">
-<title>Hello, AsciiDoc!</title>
+<meta name="generator" content="Asciidoctor 1.5.6.1">
+<title>Exercícios</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -18,7 +17,6 @@ audio:not([controls]){display:none;height:0}
 [hidden],template{display:none}
 script{display:none!important}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
-body{margin:0}
 a{background:transparent}
 a:focus{outline:thin dotted}
 a:active,a:hover{outline:0}
@@ -53,7 +51,7 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 *,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -65,7 +63,6 @@ img{-ms-interpolation-mode:bicubic}
 .text-center{text-align:center!important}
 .text-justify{text-align:justify!important}
 .hide{display:none}
-body{-webkit-font-smoothing:antialiased}
 img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
@@ -92,13 +89,12 @@ strong,b{font-weight:bold;line-height:inherit}
 small{font-size:60%;line-height:inherit}
 code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
 ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
-ul,ol,ul.no-bullet,ol.no-bullet{margin-left:1.5em}
+ul,ol{margin-left:1.5em}
 ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
 ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
 ul.square{list-style-type:square}
 ul.circle{list-style-type:circle}
 ul.disc{list-style-type:disc}
-ul.no-bullet{list-style:none}
 ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
 dl dt{margin-bottom:.3125em;font-weight:bold}
 dl dd{margin-bottom:1.25em}
@@ -120,18 +116,25 @@ table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
 table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
-body{tab-size:4}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
 .clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
 .clearfix:after,.float-group:after{clear:both}
-*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+*:not(pre)>code.nobreak{word-wrap:normal}
+*:not(pre)>code.nowrap{white-space:nowrap}
 pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
+em em{font-style:normal}
+strong strong{font-weight:400}
 .keyseq{color:rgba(51,51,51,.8)}
 kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
 .keyseq kbd:first-child{margin-left:0}
 .keyseq kbd:last-child{margin-right:0}
-.menuseq,.menu{color:rgba(0,0,0,.8)}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
 b.button:before,b.button:after{position:relative;top:-1px;font-weight:400}
 b.button:before{content:"[";padding:0 3px 0 2px}
 b.button:after{content:"]";padding:0 2px 0 3px}
@@ -198,7 +201,7 @@ table.tableblock>caption.title{white-space:nowrap;overflow:visible;max-width:0}
 table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inherit}
 .admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
 .admonitionblock>table td.icon{text-align:center;width:80px}
-.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon img{max-width:initial}
 .admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
 .admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #ddddd8;color:rgba(0,0,0,.6)}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
@@ -254,13 +257,13 @@ table.pyhltable .linenodiv{background:none!important;padding-right:0!important}
 table.tableblock{max-width:100%;border-collapse:separate}
 table.tableblock td>.paragraph:last-child p>p:last-child,table.tableblock th>p:last-child,table.tableblock td>p:last-child{margin-bottom:0}
 table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
-table.grid-all th.tableblock,table.grid-all td.tableblock{border-width:0 1px 1px 0}
-table.grid-all tfoot>tr>th.tableblock,table.grid-all tfoot>tr>td.tableblock{border-width:1px 1px 0 0}
-table.grid-cols th.tableblock,table.grid-cols td.tableblock{border-width:0 1px 0 0}
-table.grid-all *>tr>.tableblock:last-child,table.grid-cols *>tr>.tableblock:last-child{border-right-width:0}
-table.grid-rows th.tableblock,table.grid-rows td.tableblock{border-width:0 0 1px 0}
-table.grid-all tbody>tr:last-child>th.tableblock,table.grid-all tbody>tr:last-child>td.tableblock,table.grid-all thead:last-child>tr>th.tableblock,table.grid-rows tbody>tr:last-child>th.tableblock,table.grid-rows tbody>tr:last-child>td.tableblock,table.grid-rows thead:last-child>tr>th.tableblock{border-bottom-width:0}
-table.grid-rows tfoot>tr>th.tableblock,table.grid-rows tfoot>tr>td.tableblock{border-width:1px 0 0 0}
+table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
+table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
+table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
+table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px 0}
+table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0 0}
+table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
+table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
 table.frame-all{border-width:1px}
 table.frame-sides{border-width:0 1px}
 table.frame-topbot{border-width:1px 0}
@@ -281,10 +284,12 @@ ul li ol{margin-left:1.5em}
 dl dd{margin-left:1.125em}
 dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
 ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
-ul.unstyled,ol.unnumbered,ul.checklist,ul.none{list-style-type:none}
-ul.unstyled,ol.unnumbered,ul.checklist{margin-left:.625em}
-ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1em;font-size:.85em}
-ul.checklist li>p:first-child>input[type="checkbox"]:first-child{width:1em;position:relative;top:1px}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
 ul.inline{margin:0 auto .625em auto;margin-left:-1.375em;margin-right:0;padding:0;list-style:none;overflow:hidden}
 ul.inline>li{list-style:none;float:left;margin-left:1.375em;display:block}
 ul.inline>li>*{display:block}
@@ -301,7 +306,8 @@ ol.lowergreek{list-style-type:lower-greek}
 td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
 td.hdlist1{font-weight:bold;padding-bottom:1.25em}
 .literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
-.colist>table tr>td:first-of-type{padding:0 .75em;line-height:1}
+.colist>table tr>td:first-of-type{padding:.4em .75em 0 .75em;line-height:1;vertical-align:top}
+.colist>table tr>td:first-of-type img{max-width:initial}
 .colist>table tr>td:last-of-type{padding:.25em 0}
 .thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
 .imageblock.left,.imageblock[style*="float: left"]{margin:.25em .625em 1.25em 0}
@@ -364,6 +370,7 @@ div.unbreakable{page-break-inside:avoid}
 .yellow{color:#bfbf00}
 .yellow-background{background-color:#fafa00}
 span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
 .admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
 .admonitionblock td.icon .icon-note:before{content:"\f05a";color:#19407c}
 .admonitionblock td.icon .icon-tip:before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
@@ -417,39 +424,373 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .hide-for-print{display:none!important}
 .show-for-print{display:inherit!important}}
 </style>
+<style>
+.listingblock .pygments .hll { background-color: #ffffcc }
+.listingblock .pygments, .listingblock .pygments code { background: #f8f8f8; }
+.listingblock .pygments .tok-c { color: #408080; font-style: italic } /* Comment */
+.listingblock .pygments .tok-err { border: 1px solid #FF0000 } /* Error */
+.listingblock .pygments .tok-k { color: #008000; font-weight: bold } /* Keyword */
+.listingblock .pygments .tok-o { color: #666666 } /* Operator */
+.listingblock .pygments .tok-ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.listingblock .pygments .tok-cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.listingblock .pygments .tok-cp { color: #BC7A00 } /* Comment.Preproc */
+.listingblock .pygments .tok-cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.listingblock .pygments .tok-c1 { color: #408080; font-style: italic } /* Comment.Single */
+.listingblock .pygments .tok-cs { color: #408080; font-style: italic } /* Comment.Special */
+.listingblock .pygments .tok-gd { color: #A00000 } /* Generic.Deleted */
+.listingblock .pygments .tok-ge { font-style: italic } /* Generic.Emph */
+.listingblock .pygments .tok-gr { color: #FF0000 } /* Generic.Error */
+.listingblock .pygments .tok-gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.listingblock .pygments .tok-gi { color: #00A000 } /* Generic.Inserted */
+.listingblock .pygments .tok-go { color: #888888 } /* Generic.Output */
+.listingblock .pygments .tok-gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.listingblock .pygments .tok-gs { font-weight: bold } /* Generic.Strong */
+.listingblock .pygments .tok-gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.listingblock .pygments .tok-gt { color: #0044DD } /* Generic.Traceback */
+.listingblock .pygments .tok-kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.listingblock .pygments .tok-kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.listingblock .pygments .tok-kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.listingblock .pygments .tok-kp { color: #008000 } /* Keyword.Pseudo */
+.listingblock .pygments .tok-kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.listingblock .pygments .tok-kt { color: #B00040 } /* Keyword.Type */
+.listingblock .pygments .tok-m { color: #666666 } /* Literal.Number */
+.listingblock .pygments .tok-s { color: #BA2121 } /* Literal.String */
+.listingblock .pygments .tok-na { color: #7D9029 } /* Name.Attribute */
+.listingblock .pygments .tok-nb { color: #008000 } /* Name.Builtin */
+.listingblock .pygments .tok-nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.listingblock .pygments .tok-no { color: #880000 } /* Name.Constant */
+.listingblock .pygments .tok-nd { color: #AA22FF } /* Name.Decorator */
+.listingblock .pygments .tok-ni { color: #999999; font-weight: bold } /* Name.Entity */
+.listingblock .pygments .tok-ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.listingblock .pygments .tok-nf { color: #0000FF } /* Name.Function */
+.listingblock .pygments .tok-nl { color: #A0A000 } /* Name.Label */
+.listingblock .pygments .tok-nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.listingblock .pygments .tok-nt { color: #008000; font-weight: bold } /* Name.Tag */
+.listingblock .pygments .tok-nv { color: #19177C } /* Name.Variable */
+.listingblock .pygments .tok-ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.listingblock .pygments .tok-w { color: #bbbbbb } /* Text.Whitespace */
+.listingblock .pygments .tok-mb { color: #666666 } /* Literal.Number.Bin */
+.listingblock .pygments .tok-mf { color: #666666 } /* Literal.Number.Float */
+.listingblock .pygments .tok-mh { color: #666666 } /* Literal.Number.Hex */
+.listingblock .pygments .tok-mi { color: #666666 } /* Literal.Number.Integer */
+.listingblock .pygments .tok-mo { color: #666666 } /* Literal.Number.Oct */
+.listingblock .pygments .tok-sa { color: #BA2121 } /* Literal.String.Affix */
+.listingblock .pygments .tok-sb { color: #BA2121 } /* Literal.String.Backtick */
+.listingblock .pygments .tok-sc { color: #BA2121 } /* Literal.String.Char */
+.listingblock .pygments .tok-dl { color: #BA2121 } /* Literal.String.Delimiter */
+.listingblock .pygments .tok-sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.listingblock .pygments .tok-s2 { color: #BA2121 } /* Literal.String.Double */
+.listingblock .pygments .tok-se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.listingblock .pygments .tok-sh { color: #BA2121 } /* Literal.String.Heredoc */
+.listingblock .pygments .tok-si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.listingblock .pygments .tok-sx { color: #008000 } /* Literal.String.Other */
+.listingblock .pygments .tok-sr { color: #BB6688 } /* Literal.String.Regex */
+.listingblock .pygments .tok-s1 { color: #BA2121 } /* Literal.String.Single */
+.listingblock .pygments .tok-ss { color: #19177C } /* Literal.String.Symbol */
+.listingblock .pygments .tok-bp { color: #008000 } /* Name.Builtin.Pseudo */
+.listingblock .pygments .tok-fm { color: #0000FF } /* Name.Function.Magic */
+.listingblock .pygments .tok-vc { color: #19177C } /* Name.Variable.Class */
+.listingblock .pygments .tok-vg { color: #19177C } /* Name.Variable.Global */
+.listingblock .pygments .tok-vi { color: #19177C } /* Name.Variable.Instance */
+.listingblock .pygments .tok-vm { color: #19177C } /* Name.Variable.Magic */
+.listingblock .pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
+</style>
 </head>
-<body class="article">
+<body class="article toc2 toc-left">
 <div id="header">
-<h1>Hello, AsciiDoc!</h1>
-<div class="details">
-<span id="author" class="author">Doc Writer</span><br>
-<span id="email" class="email"><a href="mailto:doc@example.com">doc@example.com</a></span><br>
-</div>
-</div>
-<div id="content">
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>An introduction to <a href="http://asciidoc.org">AsciiDoc</a>.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_first_section">First Section</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>item 1</p>
-</li>
-<li>
-<p>item 2</p>
+<h1>Exercícios</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_manipulando_pixels_em_uma_imagem">1. Manipulando pixels em uma imagem</a>
+<ul class="sectlevel2">
+<li><a href="#_regiões">1.1. Regiões</a></li>
+<li><a href="#_código">1.2. Código</a></li>
+<li><a href="#_descrição_do_programa_code_regions_cpp_code">1.3. Descrição do programa <code>regions.cpp</code></a></li>
+</ul>
 </li>
 </ul>
 </div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_manipulando_pixels_em_uma_imagem">1. Manipulando pixels em uma imagem</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_regiões">1.1. Regiões</h3>
+<div class="paragraph">
+<p>Esse programa deverá solicitar ao usuário as coordenadas de dois pontos \(P_{1}\) e \(P_{1}\) localizados dentro dos limites do tamanho da imagem e exibir que lhe for fornecida. Entretanto, a região definida pelo retângulo de vértices opostos definidos pelos pontos \(P_{1}\) e \(P_{1}\) será exibida com o negativo da imagem na região correspondente. O efeito é ilustrado na Figura Regiões.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_código">1.2. Código</h3>
+<div class="listingblock">
+<div class="title">regions.cpp</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="c++"><span></span><span class="tok-cp">#include</span> <span class="tok-cpf">&lt;iostream&gt;</span><span class="tok-cp"></span>
+<span class="tok-cp">#include</span> <span class="tok-cpf">&lt;opencv2/opencv.hpp&gt;</span><span class="tok-cp"></span>
+
+<span class="tok-k">using</span> <span class="tok-k">namespace</span> <span class="tok-n">cv</span><span class="tok-p">;</span>
+<span class="tok-k">using</span> <span class="tok-k">namespace</span> <span class="tok-n">std</span><span class="tok-p">;</span>
+
+<span class="tok-kt">void</span> <span class="tok-nf">mostraImagem</span><span class="tok-p">(</span><span class="tok-n">string</span> <span class="tok-n">janela</span><span class="tok-p">,</span> <span class="tok-n">Mat</span> <span class="tok-n">image</span><span class="tok-p">){</span>
+    <span class="tok-n">imshow</span><span class="tok-p">(</span><span class="tok-s">&quot;janela&quot;</span><span class="tok-p">,</span> <span class="tok-n">image</span><span class="tok-p">);</span>
+    <span class="tok-n">waitKey</span><span class="tok-p">();</span>
+<span class="tok-p">}</span>
+
+<span class="tok-kt">int</span> <span class="tok-nf">main</span><span class="tok-p">(</span><span class="tok-kt">int</span><span class="tok-p">,</span> <span class="tok-kt">char</span><span class="tok-o">**</span> <span class="tok-n">argv</span><span class="tok-p">){</span>
+  <span class="tok-n">Mat</span> <span class="tok-n">image</span><span class="tok-p">;</span>
+  <span class="tok-n">CvPoint</span> <span class="tok-n">P1</span><span class="tok-p">,</span> <span class="tok-n">P2</span><span class="tok-p">;</span>
+  <span class="tok-kt">int</span> <span class="tok-n">largura</span><span class="tok-p">,</span> <span class="tok-n">altura</span><span class="tok-p">;</span>
+
+  <span class="tok-n">image</span><span class="tok-o">=</span> <span class="tok-n">imread</span><span class="tok-p">(</span><span class="tok-n">argv</span><span class="tok-p">[</span><span class="tok-mi">1</span><span class="tok-p">],</span><span class="tok-n">CV_LOAD_IMAGE_GRAYSCALE</span><span class="tok-p">);</span>
+  <span class="tok-k">if</span><span class="tok-p">(</span><span class="tok-o">!</span><span class="tok-n">image</span><span class="tok-p">.</span><span class="tok-n">data</span><span class="tok-p">)</span>
+    <span class="tok-n">cout</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-s">&quot;A imagem não pode ser carregada&quot;</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-n">endl</span><span class="tok-p">;</span>
+
+
+  <span class="tok-n">largura</span> <span class="tok-o">=</span>  <span class="tok-n">image</span><span class="tok-p">.</span><span class="tok-n">size</span><span class="tok-p">().</span><span class="tok-n">width</span><span class="tok-p">;</span>
+  <span class="tok-n">altura</span>  <span class="tok-o">=</span>  <span class="tok-n">image</span><span class="tok-p">.</span><span class="tok-n">size</span><span class="tok-p">().</span><span class="tok-n">height</span><span class="tok-p">;</span>
+
+  <span class="tok-n">mostraImagem</span><span class="tok-p">(</span><span class="tok-s">&quot;janela&quot;</span><span class="tok-p">,</span> <span class="tok-n">image</span><span class="tok-p">);</span>
+
+  <span class="tok-n">cout</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-s">&quot;-Informe o valor x de P1: &quot;</span><span class="tok-p">;</span>
+  <span class="tok-n">cin</span> <span class="tok-o">&gt;&gt;</span> <span class="tok-n">P1</span><span class="tok-p">.</span><span class="tok-n">x</span><span class="tok-p">;</span>
+  <span class="tok-k">if</span> <span class="tok-p">(</span><span class="tok-n">P1</span><span class="tok-p">.</span><span class="tok-n">x</span> <span class="tok-o">&lt;</span> <span class="tok-mi">0</span> <span class="tok-o">||</span> <span class="tok-n">P1</span><span class="tok-p">.</span><span class="tok-n">x</span> <span class="tok-o">&gt;</span> <span class="tok-n">altura</span><span class="tok-p">)</span>
+  <span class="tok-p">{</span>
+    <span class="tok-n">cout</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-s">&quot;Valor invalido para altura da imagem!&quot;</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-n">endl</span><span class="tok-p">;</span>
+    <span class="tok-k">return</span><span class="tok-p">(</span><span class="tok-o">-</span><span class="tok-mi">1</span><span class="tok-p">);</span>
+  <span class="tok-p">}</span>
+
+  <span class="tok-n">cout</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-s">&quot;-Informe o valor y de P1: &quot;</span><span class="tok-p">;</span>
+  <span class="tok-n">cin</span> <span class="tok-o">&gt;&gt;</span> <span class="tok-n">P1</span><span class="tok-p">.</span><span class="tok-n">y</span><span class="tok-p">;</span>
+  <span class="tok-k">if</span> <span class="tok-p">(</span><span class="tok-n">P1</span><span class="tok-p">.</span><span class="tok-n">x</span> <span class="tok-o">&lt;</span> <span class="tok-mi">0</span> <span class="tok-o">||</span> <span class="tok-n">P1</span><span class="tok-p">.</span><span class="tok-n">x</span> <span class="tok-o">&gt;</span> <span class="tok-n">largura</span><span class="tok-p">)</span>
+  <span class="tok-p">{</span>
+    <span class="tok-n">cout</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-s">&quot;Valor invalido para largura da imagem!&quot;</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-n">endl</span><span class="tok-p">;</span>
+    <span class="tok-k">return</span><span class="tok-p">(</span><span class="tok-o">-</span><span class="tok-mi">1</span><span class="tok-p">);</span>
+  <span class="tok-p">}</span>
+
+  <span class="tok-n">cout</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-s">&quot;-Informe o valor x de P2: &quot;</span><span class="tok-p">;</span>
+  <span class="tok-n">cin</span> <span class="tok-o">&gt;&gt;</span> <span class="tok-n">P2</span><span class="tok-p">.</span><span class="tok-n">x</span><span class="tok-p">;</span>
+  <span class="tok-k">if</span> <span class="tok-p">(</span><span class="tok-n">P2</span><span class="tok-p">.</span><span class="tok-n">x</span> <span class="tok-o">&lt;</span> <span class="tok-mi">0</span> <span class="tok-o">||</span> <span class="tok-n">P2</span><span class="tok-p">.</span><span class="tok-n">x</span> <span class="tok-o">&gt;</span> <span class="tok-n">altura</span><span class="tok-p">)</span>
+  <span class="tok-p">{</span>
+    <span class="tok-n">cout</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-s">&quot;Valor invalido para altura da imagem!&quot;</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-n">endl</span><span class="tok-p">;</span>
+    <span class="tok-k">return</span><span class="tok-p">(</span><span class="tok-o">-</span><span class="tok-mi">1</span><span class="tok-p">);</span>
+  <span class="tok-p">}</span>
+
+  <span class="tok-n">cout</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-s">&quot;-Informe o valor y de P2: &quot;</span><span class="tok-p">;</span>
+  <span class="tok-n">cin</span> <span class="tok-o">&gt;&gt;</span> <span class="tok-n">P2</span><span class="tok-p">.</span><span class="tok-n">y</span><span class="tok-p">;</span>
+   <span class="tok-k">if</span> <span class="tok-p">(</span><span class="tok-n">P2</span><span class="tok-p">.</span><span class="tok-n">x</span> <span class="tok-o">&lt;</span> <span class="tok-mi">0</span> <span class="tok-o">||</span> <span class="tok-n">P2</span><span class="tok-p">.</span><span class="tok-n">x</span> <span class="tok-o">&gt;</span> <span class="tok-n">largura</span><span class="tok-p">)</span>
+  <span class="tok-p">{</span>
+    <span class="tok-n">cout</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-s">&quot;Valor invalido para largura da imagem!&quot;</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-n">endl</span><span class="tok-p">;</span>
+    <span class="tok-k">return</span><span class="tok-p">(</span><span class="tok-o">-</span><span class="tok-mi">1</span><span class="tok-p">);</span>
+  <span class="tok-p">}</span>
+
+  <span class="tok-n">namedWindow</span><span class="tok-p">(</span><span class="tok-s">&quot;janela&quot;</span><span class="tok-p">,</span><span class="tok-n">WINDOW_AUTOSIZE</span><span class="tok-p">);</span>
+
+  <span class="tok-k">for</span><span class="tok-p">(</span><span class="tok-kt">int</span> <span class="tok-n">i</span><span class="tok-o">=</span><span class="tok-n">P1</span><span class="tok-p">.</span><span class="tok-n">x</span><span class="tok-p">;</span> <span class="tok-n">i</span><span class="tok-o">&lt;</span><span class="tok-n">P2</span><span class="tok-p">.</span><span class="tok-n">x</span><span class="tok-p">;</span> <span class="tok-n">i</span><span class="tok-o">++</span><span class="tok-p">){</span>
+    <span class="tok-k">for</span><span class="tok-p">(</span><span class="tok-kt">int</span> <span class="tok-n">j</span><span class="tok-o">=</span><span class="tok-n">P1</span><span class="tok-p">.</span><span class="tok-n">y</span><span class="tok-p">;</span> <span class="tok-n">j</span><span class="tok-o">&lt;</span><span class="tok-n">P2</span><span class="tok-p">.</span><span class="tok-n">y</span><span class="tok-p">;</span> <span class="tok-n">j</span><span class="tok-o">++</span><span class="tok-p">){</span>
+      <span class="tok-n">image</span><span class="tok-p">.</span><span class="tok-n">at</span><span class="tok-o">&lt;</span><span class="tok-n">uchar</span><span class="tok-o">&gt;</span><span class="tok-p">(</span><span class="tok-n">i</span><span class="tok-p">,</span><span class="tok-n">j</span><span class="tok-p">)</span> <span class="tok-o">=</span> <span class="tok-mi">255</span> <span class="tok-o">-</span> <span class="tok-n">image</span><span class="tok-p">.</span><span class="tok-n">at</span><span class="tok-o">&lt;</span><span class="tok-n">uchar</span><span class="tok-o">&gt;</span><span class="tok-p">(</span><span class="tok-n">i</span><span class="tok-p">,</span><span class="tok-n">j</span><span class="tok-p">);</span>
+    <span class="tok-p">}</span>
+  <span class="tok-p">}</span>
+
+  <span class="tok-n">imwrite</span><span class="tok-p">(</span><span class="tok-s">&quot;Regiões.png&quot;</span><span class="tok-p">,</span> <span class="tok-n">image</span><span class="tok-p">);</span>
+  <span class="tok-n">mostraImagem</span><span class="tok-p">(</span><span class="tok-s">&quot;janela&quot;</span><span class="tok-p">,</span> <span class="tok-n">image</span><span class="tok-p">);</span>
+  <span class="tok-k">return</span> <span class="tok-mi">0</span><span class="tok-p">;</span>
+<span class="tok-p">}</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_descrição_do_programa_code_regions_cpp_code">1.3. Descrição do programa <code>regions.cpp</code></h3>
+<div class="listingblock">
+<div class="title">Função <code>mostraImagem</code></div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="c++"><span></span><span class="tok-kt">void</span> <span class="tok-nf">mostraImagem</span><span class="tok-p">(</span><span class="tok-n">string</span> <span class="tok-n">janela</span><span class="tok-p">,</span> <span class="tok-n">Mat</span> <span class="tok-n">image</span><span class="tok-p">){</span> <b class="conum">(1)</b>
+    <span class="tok-n">imshow</span><span class="tok-p">(</span><span class="tok-s">&quot;janela&quot;</span><span class="tok-p">,</span> <span class="tok-n">image</span><span class="tok-p">);</span> <b class="conum">(2)</b>
+    <span class="tok-n">waitKey</span><span class="tok-p">();</span>	<b class="conum">(3)</b>
+<span class="tok-p">}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>A função <code>mostraImagem</code> tem o objetivo de mostrar como se encontra a <code>image</code> no momento em que a mesma é chamada.</p>
+</li>
+<li>
+<p>Janela com o nome <em>“janela”</em>.</p>
+</li>
+<li>
+<p>O programa entra em pausa temporária até que o usuário pressione alguma tecla.</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="title">Declaração de variáveis</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="c++"><span></span>  <span class="tok-n">Mat</span> <span class="tok-n">image</span><span class="tok-p">;</span>	<b class="conum">(1)</b>
+  <span class="tok-n">CvPoint</span> <span class="tok-n">P1</span><span class="tok-p">,</span> <span class="tok-n">P2</span><span class="tok-p">;</span>	<b class="conum">(2)</b>
+  <span class="tok-kt">int</span> <span class="tok-n">largura</span><span class="tok-p">,</span> <span class="tok-n">altura</span><span class="tok-p">;</span>	<b class="conum">(3)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Variável do tipo Mat, para armazenar a imagem.</p>
+</li>
+<li>
+<p>Variável do tipo <code>CvPoint</code>, onde a mesma cria um ponto na segunda dimensão que permite acesso às suas coordenadas x.</p>
+</li>
+<li>
+<p>Variável para guardar a largura e altura da imagem.</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="title">Checando se a imagem abriu corretamente</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="c++"><span></span><span class="tok-n">image</span><span class="tok-o">=</span> <span class="tok-n">imread</span><span class="tok-p">(</span><span class="tok-n">argv</span><span class="tok-p">[</span><span class="tok-mi">1</span><span class="tok-p">],</span><span class="tok-n">CV_LOAD_IMAGE_GRAYSCALE</span><span class="tok-p">);</span>		<b class="conum">(1)</b>
+  <span class="tok-k">if</span><span class="tok-p">(</span><span class="tok-o">!</span><span class="tok-n">image</span><span class="tok-p">.</span><span class="tok-n">data</span><span class="tok-p">)</span>		<b class="conum">(2)</b>
+    <span class="tok-n">cout</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-s">&quot;A imagem não pode ser carregada&quot;</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-n">endl</span><span class="tok-p">;</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Carregando a imagem para o programa e independentemente do formato da mesma, ela será convertida para tons de cinza, uma vez que o exemplo assume essa condição.</p>
+</li>
+<li>
+<p>Caso a imagem <code>image</code> não possua dados em seu interior, informe ao usuário.</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="title">Obtendo os valores da largura e altura da imagem</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="c++"><span></span>  <span class="tok-n">largura</span> <span class="tok-o">=</span>  <span class="tok-n">image</span><span class="tok-p">.</span><span class="tok-n">size</span><span class="tok-p">().</span><span class="tok-n">width</span><span class="tok-p">;</span>
+  <span class="tok-n">altura</span>  <span class="tok-o">=</span>  <span class="tok-n">image</span><span class="tok-p">.</span><span class="tok-n">size</span><span class="tok-p">().</span><span class="tok-n">height</span><span class="tok-p">;</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Obtendo o valor da coordenada <em>x</em> de  \(P_{1}\)</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="c++"><span></span><span class="tok-n">cout</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-s">&quot;-Informe o valor x de P1: &quot;</span><span class="tok-p">;</span>
+  <span class="tok-n">cin</span> <span class="tok-o">&gt;&gt;</span> <span class="tok-n">P1</span><span class="tok-p">.</span><span class="tok-n">x</span><span class="tok-p">;</span>
+  <span class="tok-k">if</span> <span class="tok-p">(</span><span class="tok-n">P1</span><span class="tok-p">.</span><span class="tok-n">x</span> <span class="tok-o">&lt;</span> <span class="tok-mi">0</span> <span class="tok-o">||</span> <span class="tok-n">P1</span><span class="tok-p">.</span><span class="tok-n">x</span> <span class="tok-o">&gt;</span> <span class="tok-n">altura</span><span class="tok-p">)</span>	<b class="conum">(1)</b>
+  <span class="tok-p">{</span>
+    <span class="tok-n">cout</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-s">&quot;Valor invalido para altura da imagem!&quot;</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-n">endl</span><span class="tok-p">;</span>
+    <span class="tok-k">return</span><span class="tok-p">(</span><span class="tok-o">-</span><span class="tok-mi">1</span><span class="tok-p">);</span>
+  <span class="tok-p">}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Se o valor informado for menor ou maior do que os valores mínimos ou máximos da altura da imagem o programa irá encerra.</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="title">Obtendo o valor da coordenada <em>y</em> de  \(P_{1}\)</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="c++"><span></span><span class="tok-n">cout</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-s">&quot;-Informe o valor y de P1: &quot;</span><span class="tok-p">;</span>
+  <span class="tok-n">cin</span> <span class="tok-o">&gt;&gt;</span> <span class="tok-n">P1</span><span class="tok-p">.</span><span class="tok-n">y</span><span class="tok-p">;</span>
+  <span class="tok-k">if</span> <span class="tok-p">(</span><span class="tok-n">P1</span><span class="tok-p">.</span><span class="tok-n">x</span> <span class="tok-o">&lt;</span> <span class="tok-mi">0</span> <span class="tok-o">||</span> <span class="tok-n">P1</span><span class="tok-p">.</span><span class="tok-n">x</span> <span class="tok-o">&gt;</span> <span class="tok-n">largura</span><span class="tok-p">)</span> <b class="conum">(1)</b>
+  <span class="tok-p">{</span>
+    <span class="tok-n">cout</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-s">&quot;Valor invalido para largura da imagem!&quot;</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-n">endl</span><span class="tok-p">;</span>
+    <span class="tok-k">return</span><span class="tok-p">(</span><span class="tok-o">-</span><span class="tok-mi">1</span><span class="tok-p">);</span>
+  <span class="tok-p">}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Se o valor informado for menor ou maior do que os valores mínimos ou máximos da largura da imagem o programa irá encerra.</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="title">Obtendo o valor da coordenada <em>x</em> de  \(P_{2}\)</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="c++"><span></span><span class="tok-n">cout</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-s">&quot;-Informe o valor x de P2: &quot;</span><span class="tok-p">;</span>
+  <span class="tok-n">cin</span> <span class="tok-o">&gt;&gt;</span> <span class="tok-n">P2</span><span class="tok-p">.</span><span class="tok-n">x</span><span class="tok-p">;</span>
+  <span class="tok-k">if</span> <span class="tok-p">(</span><span class="tok-n">P2</span><span class="tok-p">.</span><span class="tok-n">x</span> <span class="tok-o">&lt;</span> <span class="tok-mi">0</span> <span class="tok-o">||</span> <span class="tok-n">P2</span><span class="tok-p">.</span><span class="tok-n">x</span> <span class="tok-o">&gt;</span> <span class="tok-n">altura</span><span class="tok-p">)</span> <b class="conum">(1)</b>
+  <span class="tok-p">{</span>
+    <span class="tok-n">cout</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-s">&quot;Valor invalido para altura da imagem!&quot;</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-n">endl</span><span class="tok-p">;</span>
+    <span class="tok-k">return</span><span class="tok-p">(</span><span class="tok-o">-</span><span class="tok-mi">1</span><span class="tok-p">);</span>
+  <span class="tok-p">}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Se o valor informado for menor ou maior do que os valores mínimos ou máximos da altura da imagem o programa irá encerra.</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="title">Obtendo o valor da coordenada <em>y</em> de  \(P_{2}\)</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="c++"><span></span><span class="tok-n">cout</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-s">&quot;-Informe o valor y de P1: &quot;</span><span class="tok-p">;</span>
+  <span class="tok-n">cin</span> <span class="tok-o">&gt;&gt;</span> <span class="tok-n">P1</span><span class="tok-p">.</span><span class="tok-n">y</span><span class="tok-p">;</span>
+  <span class="tok-k">if</span> <span class="tok-p">(</span><span class="tok-n">P1</span><span class="tok-p">.</span><span class="tok-n">x</span> <span class="tok-o">&lt;</span> <span class="tok-mi">0</span> <span class="tok-o">||</span> <span class="tok-n">P1</span><span class="tok-p">.</span><span class="tok-n">x</span> <span class="tok-o">&gt;</span> <span class="tok-n">largura</span><span class="tok-p">)</span> <b class="conum">(1)</b>
+  <span class="tok-p">{</span>
+    <span class="tok-n">cout</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-s">&quot;Valor invalido para largura da imagem!&quot;</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-n">endl</span><span class="tok-p">;</span>
+    <span class="tok-k">return</span><span class="tok-p">(</span><span class="tok-o">-</span><span class="tok-mi">1</span><span class="tok-p">);</span>
+  <span class="tok-p">}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Se o valor informado for menor ou maior do que os valores mínimos ou máximos da largura da imagem o programa irá encerra.</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="title">Fazendo a o negativo e gerando a imagem.</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="c++"><span></span><span class="tok-n">namedWindow</span><span class="tok-p">(</span><span class="tok-s">&quot;janela&quot;</span><span class="tok-p">,</span><span class="tok-n">WINDOW_AUTOSIZE</span><span class="tok-p">);</span> <b class="conum">(1)</b>
+
+  <span class="tok-k">for</span><span class="tok-p">(</span><span class="tok-kt">int</span> <span class="tok-n">i</span><span class="tok-o">=</span><span class="tok-n">P1</span><span class="tok-p">.</span><span class="tok-n">x</span><span class="tok-p">;</span> <span class="tok-n">i</span><span class="tok-o">&lt;</span><span class="tok-n">P2</span><span class="tok-p">.</span><span class="tok-n">x</span><span class="tok-p">;</span> <span class="tok-n">i</span><span class="tok-o">++</span><span class="tok-p">){</span>		<b class="conum">(2)</b>
+    <span class="tok-k">for</span><span class="tok-p">(</span><span class="tok-kt">int</span> <span class="tok-n">j</span><span class="tok-o">=</span><span class="tok-n">P1</span><span class="tok-p">.</span><span class="tok-n">y</span><span class="tok-p">;</span> <span class="tok-n">j</span><span class="tok-o">&lt;</span><span class="tok-n">P2</span><span class="tok-p">.</span><span class="tok-n">y</span><span class="tok-p">;</span> <span class="tok-n">j</span><span class="tok-o">++</span><span class="tok-p">){</span>	<b class="conum">(3)</b>
+      <span class="tok-n">image</span><span class="tok-p">.</span><span class="tok-n">at</span><span class="tok-o">&lt;</span><span class="tok-n">uchar</span><span class="tok-o">&gt;</span><span class="tok-p">(</span><span class="tok-n">i</span><span class="tok-p">,</span><span class="tok-n">j</span><span class="tok-p">)</span> <span class="tok-o">=</span> <span class="tok-mi">255</span> <span class="tok-o">-</span> <span class="tok-n">image</span><span class="tok-p">.</span><span class="tok-n">at</span><span class="tok-o">&lt;</span><span class="tok-n">uchar</span><span class="tok-o">&gt;</span><span class="tok-p">(</span><span class="tok-n">i</span><span class="tok-p">,</span><span class="tok-n">j</span><span class="tok-p">);</span> <b class="conum">(4)</b>
+    <span class="tok-p">}</span>
+  <span class="tok-p">}</span>
+
+  <span class="tok-n">imwrite</span><span class="tok-p">(</span><span class="tok-s">&quot;Regiões.png&quot;</span><span class="tok-p">,</span> <span class="tok-n">image</span><span class="tok-p">);</span>	<b class="conum">(5)</b>
+  <span class="tok-n">mostraImagem</span><span class="tok-p">(</span><span class="tok-s">&quot;janela&quot;</span><span class="tok-p">,</span> <span class="tok-n">image</span><span class="tok-p">);</span>	<b class="conum">(5)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Cria-se uma janela para que o usuário possa referenciá-la pelo nome que é fornecido. O parâmetro WINDOW_AUTOSIZE permitirá que a janela se ajuste automaticamente para o tamanho da imagen que for fornecida para exibição.</p>
+</li>
+<li>
+<p>O primeiro laço <code>for</code> irá determinar a altura da área negativa.</p>
+</li>
+<li>
+<p>O segundo laço <code>for</code> irá determinar a largura da área negativa.</p>
+</li>
+<li>
+<p>Aqui a imagem <code>image</code> terá os seus pixels <strong><strong></strong></strong>***.</p>
+</li>
+<li>
+<p>Por fim a imagem <code>image</code> é gravada em um arquivo com o nome <code>Regiões.png</code> e de pois mostra-se  o resultado.</p>
+</li>
+</ol>
+</div>
+<div class="sect3">
+<h4 id="_funcionamento">1.3.1. Funcionamento</h4>
+<div class="paragraph">
+<p>Para compilar e executar o programa labeling.cpp, salve-o juntamente com os arquivo Makefile e bolhas.png em um diretório e execute a seguinte seqüência de comandos:</p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-ruby" data-lang="ruby">puts "Hello, World!"</code></pre>
+<pre class="pygments highlight"><code data-lang="shell"><span></span>$ make regions
+$ ./regions meme.jpg</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -457,8 +798,24 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-09-01 18:46:14 -03
+Last updated 2019-03-12 13:22:13 -03
 </div>
 </div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
 </body>
 </html>
