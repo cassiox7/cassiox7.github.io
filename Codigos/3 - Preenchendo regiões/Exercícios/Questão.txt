@@ -1,0 +1,1 @@
+caso existam mais de 255 objetos na cena, o processo de rotulação poderá ficar comprometido se a imagem for binaria, ou seja, a imagem por do tipo uchar. Para contornar esse problema pode-se uasar  uma imagem do tipo int (inteiro).

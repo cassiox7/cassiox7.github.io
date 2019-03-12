@@ -1,0 +1,8 @@
+para identificar as bolhas das extremidades, testa para a linha 0 e linha n-1, para coluna 0 e coluna n-1. Quando achar uma bolaha com valor = 255 (branco) usa-se o floodfeld para a preencher a mesma e retirar as bolhas das extremidades da imagem.
+
+
+para contar o número de bolhas que tem buraco na imagem: muda a cor do fundo da imagem (ex. um cinza) que é preto ai a cor de dentro das bolas serão pretas (valor 0) com isso percorre toda a imagem novamente, ai onde aparecer a cor preta com o redor branco será uma bolha com buraco.
+
+como saber se o pixel preto da proxima linha (abaixo) ainda é da mesmo bolha, ou seja, como evitar de contar a bolha duas vezes: pode-se preencher a bolha com a cor do fundo (ou seja com o cinza), para ter certeza olha-se se o pixel ao lado tambem é preto (ou seja o tom de cinza deve ser diferente do tom dii cinza que foi usado para preencher o fundo), para se ter certeza que ainda tem parte do buraco que ainda não foi pintada, dai quando se chegar na cor branca, sabe-se que se chegou na extremidade da bolha. 
+
+resumindo quando achar a cor preta do fundo da bolha, pinta-se o pixel em que esta com a cor de fundo e pinta tambem o pixel do lado com a cor de fundo (usa-se o fuldefild para preencher o pixel atual e o do lado, mesmo que seja a linha da bolha que é de cor branca)  
