@@ -11,7 +11,7 @@ int main(int, char** argv){
 
   image= imread(argv[1],CV_LOAD_IMAGE_GRAYSCALE);
   if(!image.data)
-    cout << "nao abriu meme.jpg" << endl;
+    cout << "A imagem não pode ser carregada" << endl;
 
   largura =  image.size().width;
   altura  =  image.size().height;

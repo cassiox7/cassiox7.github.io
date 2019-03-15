@@ -5,18 +5,20 @@ using namespace cv;
 using namespace std;
 
 int main(int argc, char** argv){
-  Mat image, mask;
-  int width, height;
-  int bolhasComFuros = 0;   //numero de bolhas completas
+  Mat image;  //Matriz que guarda a imagem
+  int width, height; //valores da largura e altura da imagem
+  int bolhasComFuros = 0;   //numero de bolhas completas (bolhas com furos e borda completa)
   int bolhasImcompletas = 0; //numero de bolhas incompletas
   int bolhas = 0; //numero de bolhas com e sem buracos
   
-  CvPoint p;
+  // Variável do tipo `CvPoint`, onde a mesma cria um ponto permite acesso às suas coordenadas `x` e `y`.
+  CvPoint p; 
+
   image = imread(argv[1],CV_LOAD_IMAGE_GRAYSCALE);
   
   if(!image.data)
   {
-    cout << "nao abriu meme.jpg" << endl;
+    cout << "A imagem não pode ser carregada" << endl;
     return(-1);
   }
 
@@ -104,7 +106,7 @@ int main(int argc, char** argv){
   imshow("image", image);
   waitKey();
 
- //pintando o fundo das bolhas com furos
+ //pintando o fundo das bolhas com furos com a mesma cor do fundo da imagem
   for(int i=0; i<height; i++)
   {
     for(int j=0; j<width; j++)
@@ -125,7 +127,7 @@ int main(int argc, char** argv){
 
 
   
-  //pintando o todas as bolhas
+  //pintando todas as bolhas
   for(int i=0; i<height; i++)
   {
     for(int j=0; j<width; j++)
