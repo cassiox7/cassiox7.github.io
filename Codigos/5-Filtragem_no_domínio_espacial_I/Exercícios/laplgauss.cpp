@@ -22,7 +22,6 @@ void menu(){
 	"h - horizontal\n"
     "l - laplaciano\n"
     "x - laplaciano do gaussiano\n"
-    "y - laplaciano do gaussiano2\n"
 	"esc - sair\n";
 }
 
@@ -50,17 +49,6 @@ int main(int argvc, char** argv){
                0,-1,-2,-1,0,
                0,0,-1,0,0
                };
-
-  float lapgauss1[]={0,1,1,2,2,2,1,1,0,
-                     1,2,4,5,5,5,4,2,1,
-                     1,4,5,3,0,3,5,4,1,
-                     2,5,3,-12,-24,-12,3,5,2,
-                     2,5,0,-24,-40,-24,0,5,2,
-                     2,5,3,-12,-24,-12,3,5,2,
-                     1,4,5,3,0,3,5,4,1,
-                     1,2,4,5,5,5,4,2,1,
-                     0,1,1,2,2,2,1,1,0};
-
 
 
 
@@ -141,11 +129,6 @@ int main(int argvc, char** argv){
       mask = Mat(5, 5, CV_32F, LoG);
       printmask(mask);
       break;     
-    case 'y':
-    menu();
-      mask = Mat(9, 9, CV_32F, LoG);
-      printmask(mask);
-      break;    
     default:
       break;
     }

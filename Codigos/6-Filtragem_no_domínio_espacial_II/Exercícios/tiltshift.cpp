@@ -51,6 +51,7 @@ int main(int argvc, char** argv){
 				  top_slider_max,
 				  on_trackbar_line );
   on_trackbar_line(top_slider, 0 );
+  
 
   waitKey(0);
   return 0;

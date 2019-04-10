@@ -5,6 +5,7 @@ using namespace cv;
 using namespace std;
 
 int main(int argc, char** argv){
+  //Matrizes para armazenar a imagem colorida, imagem emc cinza e imagem em cinza equalizada. 
   Mat image, imageCinza, imageCinzaEqualizada;
   int width, height;
   VideoCapture cap;
@@ -22,6 +23,7 @@ int main(int argc, char** argv){
     return -1;
   }
   
+  //Obtendo a largura e a altura da imagem
   width  = cap.get(CV_CAP_PROP_FRAME_WIDTH);
   height = cap.get(CV_CAP_PROP_FRAME_HEIGHT);
 
@@ -44,7 +46,7 @@ int main(int argc, char** argv){
     // Equalizando imagem com tons de cinza
     equalizeHist(imageCinza, imageCinzaEqualizada);
 
-    //Calculando os histogramas
+    //Calculando os histogramas da imagem cinza e da imagem cinza já equalizada
     calcHist(&imageCinza, 1, 0, Mat(), histCinza, 1,
              &nbins, &histCinzaange,
              uniform, acummulate);
@@ -53,7 +55,7 @@ int main(int argc, char** argv){
              uniform, acummulate);
     
 
-    //Normalizando
+    //Normalizando as imagens
     normalize(histCinza, histCinza, 0, histImgCinza.rows, NORM_MINMAX, -1, Mat());
     normalize(histEqualizado, histEqualizado, 0, histImgCinzaEqualizado.rows, NORM_MINMAX, -1, Mat());
     
@@ -77,7 +79,7 @@ int main(int argc, char** argv){
     histImgCinza.copyTo(imageCinza(Rect(0, 0, nbins, histh)));
     histImgCinzaEqualizado.copyTo(imageCinzaEqualizada(Rect(0, 0   ,nbins, histh)));
    
-   
+    //Mostrando as imagens
     imshow("Imagem em Cinza", imageCinza);
     imshow("Imagem em Cinza Equalizada", imageCinzaEqualizada);
     if(waitKey(30) >= 0) break;
